@@ -9,7 +9,7 @@ int main()
     while (inch <= 10.1) 
         {
             centimeter = 2.56 * inch;
-            printf("%i inches are %f centimeters\n", inch, centimeter);
+            printf("%f inches are %f centimeters\n", inch, centimeter);
             inch = inch + 1.;
         }
     return 0;
