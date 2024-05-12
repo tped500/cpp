@@ -15,7 +15,6 @@ int main() {
   printf("\n");
   printf("\nCelsius to Fahrenheit converter\n");
 
-  // Getting Celsius to convert
   printf("How many Celsius do you want to convert?\n");
   int celsius;
   scanf("%d", &celsius);
@@ -24,7 +23,7 @@ int main() {
 
   float fahrenheit = celsius * 1.8 + 32;
 
-  printf("%d C ---> %f F", celsius, fahrenheit);
+  printf("%d C ---> %f F\n", celsius, fahrenheit);
 
   return 0;
 }
