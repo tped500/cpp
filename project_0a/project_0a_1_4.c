@@ -3,7 +3,7 @@ Project 0a
 */
 
 /*
-Exercise 1 - build a C to F converter. F = C × 1.8 + 32
+Exercises 1 and 4 - build a C to F converter. F = C × 1.8 + 32
 */
 
 #include <stdio.h>

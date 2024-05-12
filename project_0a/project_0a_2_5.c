@@ -3,7 +3,7 @@ Project 0a
 */
 
 /*
-Exercise 2 - build a multiplication table for a given number
+Exercises 2 and 5 - build a multiplication table for a given number
 */
 
 #include <stdio.h>

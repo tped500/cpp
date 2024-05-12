@@ -17,7 +17,6 @@ int main() {
   printf("\nCelsius to Fahrenheit convertion table\n");
   
   while (celsius <= 100) {
-    // Calculating
     float fahrenheit = celsius * 1.8 + 32;
     printf("%dC ---> %fF\n", celsius, fahrenheit);
     celsius = celsius + 1;

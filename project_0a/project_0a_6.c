@@ -3,13 +3,9 @@ Project 0a
 */
 
 /*
-Exercise 5 - build a multiplication table for a given number. Use scanf() to
+Exercise 6 - build a multiplication table for a given number. Use scanf() to
 read input from keyboard. Limit previous implementation (exercise 5) to not
 allow negative values nor positive higher than 50
-
-Note: if statement is represented as:
-if (confition) {code for true condition} else {code for false condition}
-The else bit is optional
 */
 
 #include <stdio.h>
@@ -25,7 +21,8 @@ int main() {
     printf(
         "Sorry, no negative or numbers bigger than 50 are allowed. Please try "
         "again.\n");
-  } else {
+    return 1;
+
     printf("\nMultiplication table for %d\n", number);
 
     int factor = 0;
@@ -34,7 +31,7 @@ int main() {
       printf("%d x %d = %d\n", number, factor, calculation);
       factor = factor + 1;
     }
-  }
 
-  return 0;
+    return 0;
+  }
 }
