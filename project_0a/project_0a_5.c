@@ -12,17 +12,16 @@ read input from keyboard
 int main() {
   // Already answered this on question 2
 
-  int number, factor, calculation;
+  int number;
 
-  printf(
-      "\nFor which number would you like to see the multiplication table?\n");
+  printf("\nFor which number would you like to see the multiplication table?\n");
   scanf("%d", &number);
 
   printf("\nMultiplication table for %d\n", number);
-
-  factor = 0;
+  
+  int factor = 0;
   while (factor <= 10) {
-    calculation = number * factor;
+    int calculation = number * factor;
     printf("%d x %d = %d\n", number, factor, calculation);
     factor = factor + 1;
   }

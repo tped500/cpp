@@ -15,7 +15,7 @@ The else bit is optional
 #include <stdio.h>
 
 int main() {
-  int number, factor, calculation;
+  int number;
 
   printf(
       "\nFor which number would you like to see the multiplication table?\n");
@@ -28,9 +28,9 @@ int main() {
   } else {
     printf("\nMultiplication table for %d\n", number);
 
-    factor = 0;
+    int factor = 0;
     while (factor <= 10) {
-      calculation = number * factor;
+      int calculation = number * factor;
       printf("%d x %d = %d\n", number, factor, calculation);
       factor = factor + 1;
     }
