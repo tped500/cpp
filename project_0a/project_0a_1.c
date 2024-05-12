@@ -23,7 +23,7 @@ int main() {
 
   float fahrenheit = celsius * 1.8 + 32;
 
-  printf("%d C ---> %f F\n", celsius, fahrenheit);
+  printf("%dC ---> %fF\n", celsius, fahrenheit);
 
   return 0;
 }
