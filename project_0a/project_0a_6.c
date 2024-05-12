@@ -22,16 +22,16 @@ int main() {
         "Sorry, no negative or numbers bigger than 50 are allowed. Please try "
         "again.\n");
     return 1;
-
-    printf("\nMultiplication table for %d\n", number);
-
-    int factor = 0;
-    while (factor <= 10) {
-      int calculation = number * factor;
-      printf("%d x %d = %d\n", number, factor, calculation);
-      factor = factor + 1;
-    }
-
-    return 0;
   }
+
+  printf("\nMultiplication table for %d\n", number);
+
+  int factor = 0;
+  while (factor <= 10) {
+    int calculation = number * factor;
+    printf("%d x %d = %d\n", number, factor, calculation);
+    factor = factor + 1;
+  }
+
+  return 0;
 }
