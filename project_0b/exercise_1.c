@@ -6,13 +6,11 @@ Project 0b
 Exercise 1 - Write a program that calcualtes the solutions of the polynomial ax2
 + bx + c = 0
 
-It should prompt to insert the values of a, b, c and x.
-Para tal dever´a pedir os valores de a, b e c e seguidamente escrever
-correctamente no ecran a equa¸c˜ao pedida, o discriminante e finalmente as suas
-solu¸c˜oes da equa¸c˜ao. Nos casos em que haja duas solu¸c˜oes reais diferentes
-dever´a escreva-as; quando tiver duas solu¸c˜oes iguais diga qual ´e e indique-a
-como raiz dupla; quando as solu¸c˜oes forem imagin´arias diga que s˜ao
-imagin´arias e escreva-as na forma p + i q.
+- Prints discriminant value
+Depending on discriminat value it will:
+- Print both real roots
+- Print the only real root
+- Print the two complex roots in the form of p ± iq
 */
 
 #include <math.h>
