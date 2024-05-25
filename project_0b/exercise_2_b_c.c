@@ -4,7 +4,7 @@ Project 0b
 
 /*
 Exercise 2 b - Rewrite project_0a exercise 1, but allow to choose which scale to
-convert to.
+convert to and checks that the lowest temperature it can get to is -273.15C/-459.67F.
 
 F = C × 1.8 + 32
 C = (32 - F)/1.8
@@ -47,6 +47,17 @@ int main() {
 
     printf("\nHow many degrees do you want to convert? ");
     scanf("%lf", &temp_to_convert);
+
+    double min_c = -273.15;
+    double min_f = -459.67;
+
+    if (scale == 'C' && temp_to_convert < min_c) {
+        printf("\n\nThere are no temperatures lower than %lfC.\n", min_c);
+        continue;
+    } else if (scale == 'F' && temp_to_convert < min_f) {
+        printf("\n\nThere are no temperatures lower than %lfF.\n", min_f);
+        continue;
+    }
 
     valid_input = temperature_converter(temp_to_convert, toupper(scale));
   }
