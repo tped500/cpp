@@ -15,7 +15,6 @@ C = (32 - F)/1.8
 
 #include <ctype.h>
 #include <stdio.h>
-#include <stdlib.h>
 
 int temperature_converter(double temperature, char scale) {
   double converted_temp;
