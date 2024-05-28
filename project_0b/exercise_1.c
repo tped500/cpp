@@ -37,30 +37,21 @@ void quadratic_function_calculator(double a, double b, double c) {
     // Finds two complex roots
     first_root = -b / (a * 2);
     double imaginary = sqrt(-discriminant) / (a * 2);
-    printf("\nFound two complex roots: %.2lf ± %.2lfi\n", first_root, imaginary);
+    printf("\nFound two complex roots: %.2lf ± %.2lfi\n", first_root,
+           imaginary);
   }
 }
 
 int main() {
-  double a, b, c;
-
   printf("\nWelcome to the polynomial calculator, ax2 + bx + c = 0 \n");
-
   printf("\nPlease provide the following values:\n");
-
   printf("\na: ");
-
+  double a, b, c;
   scanf("%lf", &a);
-
   printf("\nb: ");
-
   scanf("%lf", &b);
-
   printf("\nc: ");
-
   scanf("%lf", &c);
-
   quadratic_function_calculator(a = a, b = b, c = c);
-
   return 0;
 }
