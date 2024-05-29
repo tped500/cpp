@@ -17,28 +17,26 @@ Depending on discriminat value it will:
 #include <stdio.h>
 
 void quadratic_function_calculator(double a, double b, double c) {
-  double discriminant, first_root;
-
-  discriminant = b * b - 4 * a * c;
-
+  
+  const discriminant = b * b - 4 * a * c;
   printf("\nDiscriminant: %.2lf\n", discriminant);
 
   if (discriminant > 0) {
     // Finds two different real roots
-    first_root = (-b + sqrt(discriminant)) / (a * 2);
-    double second_root = (-b - sqrt(discriminant)) / (a * 2);
+    double first_root = (-b + sqrt(discriminant)) / (a * 2);
+    const second_root = (-b - sqrt(discriminant)) / (a * 2);
     printf("\nFound two different real roots: %.2lf and %.2lf\n", first_root,
            second_root);
   } else if (discriminant == 0) {
     // Finds only one root
-    first_root = -b / (a * 2);
-    printf("\nFound one real root: %.2lf and %.2lf\n", first_root, first_root);
+    double first_root = -b / (a * 2);
+    printf("\nFound one real root: %.2lf\n", first_root);
   } else {
     // Finds two complex roots
-    first_root = -b / (a * 2);
-    double imaginary = sqrt(-discriminant) / (a * 2);
-    printf("\nFound two complex roots: %.2lf ± %.2lfi\n", first_root,
-           imaginary);
+    const real_component = -b / (a * 2);
+    const imaginary_component = sqrt(-discriminant) / (a * 2);
+    printf("\nFound two complex roots: %.2lf ± %.2lfi\n", real_component,
+           imaginary_component);
   }
 }
 
