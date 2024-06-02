@@ -18,7 +18,6 @@ iterations.
 
 void malthus_law_calculator(double x_initial, double growth_rate, int iterations) {
   double instant_growth = x_initial;
-  printf("\nx0 = %.2lf | µ = %.2lf\n", x_initial, growth_rate);
   for (int i = 0; i < iterations; i++) {
     printf("Iteration %2d: x = %.2lf\n", i, instant_growth);
     instant_growth = growth_rate * instant_growth;
@@ -34,6 +33,7 @@ int main() {
   double growth_rate;
   scanf("%lf", &growth_rate);
   printf("How many iterations should the program run?: ");
+  printf("\nx0 = %.2lf | µ = %.2lf\n", x_initial, growth_rate);
   const int iterations;
   scanf("%d", &iterations);
 
