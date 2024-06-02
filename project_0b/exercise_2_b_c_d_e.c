@@ -30,44 +30,41 @@ int temperature_converter(double temperature, char scale) {
     return 1;
   } else if (temperature == 'e') {
     printf("\n\nThank you for using temperature converter.\n");
-    return 1;
+    return 0;
   }
 
   if (scale == 'C') {
     printf("\n-> Converting %.2lfF to C\n", temperature);
     converted_temp = (32 - temperature) / 1.8;
-    printf("---> %.2lfF is equivalent to %.2lfC\n", temperature, converted_temp);
+    printf("---> %.2lfF is equivalent to %.2lfC\n", temperature,
+           converted_temp);
   } else {
     printf("\n-> Converting %.2lfC to F\n", temperature);
-    converted_temp = temperature * 1.8 + 32;
-    printf("---> %.2lfC is equivalent to %.2lfF\n", temperature, converted_temp);
+    converted_temp = temperature * 1.8  + 32;
+    printf("---> %.2lfC is equivalent to %.2lfF\n", temperature,
+           converted_temp);
   }
   return 1;
 }
 
 int main() {
   char scale;
-  int valid_input = 1;
 
-  while (valid_input) {
+  while (1) {
     printf(
         "\nWhich scale do you want to convert to? Please input one of the "
         "following:\n(F) - converts from C to F\n(C) - converts from F to "
         "C\nIf you wish to stop, type 'E'.\n: ");
     scanf(" %c", &scale);
 
-    printf("SCANF: %d", scale);
-
     if (toupper(scale) != 'C' && toupper(scale) != 'F' &&
-        toupper(scale) != 'E' && toupper(scale) != '\n' &&
-        toupper(scale) != EOF) {
+        toupper(scale) != 'E' && toupper(scale) != '\n') {
       printf("\n\nSorry, but only C or F are accepted. Please try again.\n");
       continue;
     }
 
     if (toupper(scale) == 'E') {
       printf("\n\nThank you for using temperature converter.\n");
-      valid_input = 0;
       break;
     } else {
       double temp_to_convert;
@@ -75,7 +72,9 @@ int main() {
       printf("\nHow many degrees do you want to convert? ");
       scanf("%lf", &temp_to_convert);
 
-      valid_input = temperature_converter(temp_to_convert, toupper(scale));
+      if (!temperature_converter(temp_to_convert, toupper(scale))) {
+        break;
+      }
     }
   }
 
