@@ -58,10 +58,10 @@ int main() {
       const double min_celsius = -273.15;
       const double min_fahrenheit = -459.67;
 
-      if (scale == 'C' && temp_to_convert < min_celsius) {
+      if (scale == 'F' && temp_to_convert < min_celsius) {
         printf("\n\nThere are no temperatures lower than %.2lfC.\n", min_celsius);
         continue;
-      } else if (scale == 'F' && temp_to_convert < min_fahrenheit) {
+      } else if (scale == 'C' && temp_to_convert < min_fahrenheit) {
         printf("\n\nThere are no temperatures lower than %.2lfF.\n", min_fahrenheit);
         continue;
       } else if (toupper(temp_to_convert) == 'E') {
