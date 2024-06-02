@@ -16,8 +16,8 @@ C = (32 - F)/1.8
 #include <ctype.h>
 #include <stdio.h>
 
-void temperature_converter(double temperature, char scale) {
-  if (scale == 'C') {
+void temperature_converter(double temperature, char target_scale) {
+  if (target_scale == 'C') {
     printf("\n-> Converting %.2lfF to C\n", temperature);
     const double converted_temp = (32 - temperature) / 1.8;
     printf("---> %.2lfF is equivalent to %.2lfC\n", temperature,
@@ -36,16 +36,16 @@ int main() {
         "\nWhich scale do you want to convert to? Please input one of the "
         "following:\n(F) - converts from C to F\n(C) - converts from F to "
         "C\nIf you wish to stop, type 'E'.\n: ");
-    char scale;
-    scanf(" %c", &scale);
-    scale = toupper(scale);
+    char target_scale;
+    scanf(" %c", &target_scale);
+    target_scale = toupper(target_scale);
 
-    if (scale != 'C' && scale != 'F' && scale != 'E') {
+    if (target_scale != 'C' && target_scale != 'F' && target_scale != 'E') {
       printf("\n\nSorry, but only C or F are accepted. Please try again.\n");
       continue;
     }
 
-    if (scale == 'E') {
+    if (target_scale == 'E') {
       printf("\n\nThank you for using temperature converter.\n");
       break;
 
@@ -58,17 +58,17 @@ int main() {
       const double min_celsius = -273.15;
       const double min_fahrenheit = -459.67;
 
-      if (scale == 'F' && temp_to_convert < min_celsius) {
+      if (target_scale == 'F' && temp_to_convert < min_celsius) {
         printf("\n\nThere are no temperatures lower than %.2lfC.\n", min_celsius);
         continue;
-      } else if (scale == 'C' && temp_to_convert < min_fahrenheit) {
+      } else if (target_scale == 'C' && temp_to_convert < min_fahrenheit) {
         printf("\n\nThere are no temperatures lower than %.2lfF.\n", min_fahrenheit);
         continue;
       } else if (toupper(temp_to_convert) == 'E') {
         printf("\n\nThank you for using temperature converter.\n");
         break;
       } else {
-        temperature_converter(temp_to_convert, scale);
+        temperature_converter(temp_to_convert, target_scale);
       }
     }
   }
