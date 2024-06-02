@@ -17,7 +17,7 @@ int main() {
   scanf("%lf", &celsius);
 
   printf("Converting %.2lf Celsius to Fahrenheit\n", celsius);
-  const fahrenheit = celsius * 1.8 + 32;
+  const double fahrenheit = celsius * 1.8 + 32;
   printf("%.2lfC is equivalent to %.2lfF\n", celsius, fahrenheit);
 
   return 0;
