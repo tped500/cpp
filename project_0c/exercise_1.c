@@ -26,7 +26,8 @@ int main() {
     fprintf(file_in, "%d x %d = %d\n", number, factor, calculation);
     factor = factor + 1;
   }
-
+  
+  fclose(file_in);
   printf("Wrote file: %s\n", filename);
 
   return 0;
