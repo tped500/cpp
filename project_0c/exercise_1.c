@@ -15,7 +15,7 @@ int main() {
   printf("\nWrite an output file name:\n");
   scanf("%s", filename);
 
-  FILE *file_in = fopen(filename, "w");
+  FILE *file_in = fopen(filename, "wt");
 
   printf("\nMultiplication table for %d\n", number);
   
