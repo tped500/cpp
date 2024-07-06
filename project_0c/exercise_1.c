@@ -11,7 +11,7 @@ int main() {
       "\nFor which number would you like to see the multiplication table?\n");
   scanf("%d", &number);
 
-  char filename[100];
+  char filename;
   printf("\nWrite an output file name:\n");
   scanf("%s", filename);
 
